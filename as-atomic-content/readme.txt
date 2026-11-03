@@ -1,7 +1,7 @@
 === AS Atomic Content ===
 Tags: acf, custom-post-types, content
 Requires at least: 6.0
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,9 @@ Advanced Custom Fields 6.1 or later is required. ACF must remain active for the 
 4. On sites with existing ACF definitions, review ACF's JSON sync screen before making further changes to those definitions.
 
 == Changelog ==
+
+= 0.1.1 =
+* Renamed the admin menu to Atoms, added an atom icon, and kept its three links visible on atomic content screens.
 
 = 0.1.0 =
 * Initial release with Cards, Rows, Patterns, and the existing Card Markup field group.

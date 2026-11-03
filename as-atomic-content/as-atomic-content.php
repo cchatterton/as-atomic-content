@@ -2,7 +2,7 @@
 /**
  * Plugin Name: AS Atomic Content
  * Description: Reusable cards, rows, and patterns managed with Advanced Custom Fields.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: AlphaSys
@@ -18,8 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ASAC_VERSION', '0.1.0' );
+define( 'ASAC_VERSION', '0.1.1' );
 define( 'ASAC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'ASAC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 require_once ASAC_PLUGIN_DIR . 'functions/setup.php';
 require_once ASAC_PLUGIN_DIR . 'functions/admin.php';

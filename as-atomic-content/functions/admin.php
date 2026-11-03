@@ -17,12 +17,12 @@ function asac_register_admin_menu() {
 
 	$parent = 'as-atomic-content';
 	$hook = add_menu_page(
-		__( 'Atomic Content', 'as-atomic-content' ),
-		__( 'Atomic Content', 'as-atomic-content' ),
+		__( 'Atoms', 'as-atomic-content' ),
+		__( 'Atoms', 'as-atomic-content' ),
 		'edit_posts',
 		$parent,
 		'__return_null',
-		'dashicons-layout',
+		ASAC_PLUGIN_URL . 'assets/atom.svg',
 		80
 	);
 	if ( $hook ) {
@@ -71,6 +71,32 @@ function asac_admin_submenu_file( $submenu_file ) {
 	return $submenu_file;
 }
 add_filter( 'submenu_file', 'asac_admin_submenu_file' );
+
+/** Whether this is a Cards, Rows, or Patterns admin screen. */
+function asac_is_atomic_screen() {
+	$screen = get_current_screen();
+	return $screen && in_array( $screen->post_type, array( 'card', 'row', 'pattern' ), true );
+}
+
+/** Scope the sidebar scroll treatment to atomic content screens. */
+function asac_admin_body_class( $classes ) {
+	if ( asac_is_atomic_screen() ) {
+		$classes .= ' asac-atomic-screen';
+	}
+	return $classes;
+}
+add_filter( 'admin_body_class', 'asac_admin_body_class' );
+
+/** Load the small sidebar navigation enhancement only where it is needed. */
+function asac_enqueue_admin_assets() {
+	if ( ! asac_is_atomic_screen() ) {
+		return;
+	}
+
+	wp_enqueue_style( 'asac-admin', ASAC_PLUGIN_URL . 'assets/admin.css', array(), ASAC_VERSION );
+	wp_enqueue_script( 'asac-admin', ASAC_PLUGIN_URL . 'assets/admin.js', array(), ASAC_VERSION, true );
+}
+add_action( 'admin_enqueue_scripts', 'asac_enqueue_admin_assets' );
 
 /** Send direct visits to the parent menu to the Cards list. */
 function asac_redirect_to_cards() {
