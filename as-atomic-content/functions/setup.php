@@ -40,6 +40,24 @@ function asac_acf_post_type_args( $args, $post_type ) {
 
 	$args['show_in_menu'] = false;
 	$args['show_in_admin_bar'] = false;
+	if ( 'pattern' === $post_type['post_type'] ) {
+		$args['public'] = false;
+		$args['publicly_queryable'] = true;
+		$args['exclude_from_search'] = true;
+		$args['show_in_nav_menus'] = false;
+		$args['has_archive'] = false;
+	}
 	return $args;
 }
 add_filter( 'acf/post_type/registration_args', 'asac_acf_post_type_args', 10, 2 );
+
+/** Refresh permalinks once when pattern viewing is enabled. */
+function asac_refresh_pattern_rewrites() {
+	if ( ! post_type_exists( 'pattern' ) || '0.1.2' === get_option( 'asac_pattern_rewrite_version' ) ) {
+		return;
+	}
+
+	flush_rewrite_rules( false );
+	update_option( 'asac_pattern_rewrite_version', '0.1.2', false );
+}
+add_action( 'init', 'asac_refresh_pattern_rewrites', 100 );
