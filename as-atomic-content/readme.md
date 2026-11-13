@@ -1,13 +1,13 @@
 # AS Atomic Content
 
-AlphaSys WordPress plugin, version 0.1.2. Requires Advanced Custom Fields 6.1 or later.
+AlphaSys WordPress plugin, version 0.2.0. Requires WordPress 6.3 or later and Advanced Custom Fields 6.1 or later for Cards, Rows, and legacy Pattern migration.
 
-The plugin registers `card`, `row`, and `pattern` through ACF Local JSON. It keeps the supplied ACF keys for `card`, `row`, and the Card Markup field group, including the `card_markup` field key. It changes only their admin menu placement and adds `pattern` with row-like editor support. Content is not migrated or deleted.
+The plugin registers `card` and `row` through ACF Local JSON. It keeps the supplied ACF keys and the Card Markup field group, including the `card_markup` field key. Legacy `pattern` posts are copied to native WordPress `wp_block` patterns with `wp_pattern_sync_status` set to `unsynced`. The original posts are retained for recovery.
 
-The WordPress admin menu contains one **Atoms** parent and exactly three child links: **Cards**, **Rows**, and **Patterns**. On those post screens, the menu opens and the desktop sidebar scrolls to the Atoms section. Creation remains available from each post list and editor, but there are no separate creation links in the menu.
+The WordPress admin menu contains one **Atoms** parent and three child links: **Cards**, **Rows**, and **Patterns**. Patterns opens the native Site Editor pattern manager. On Card and Row screens, the menu opens and the desktop sidebar scrolls to Atoms. Creation remains available from the respective editors, without separate creation links in the menu.
 
-ACF is a runtime dependency. If it is inactive, the post types and field group are unavailable and administrators see a notice. Existing sites with ACF post type definitions in the database should review ACF's JSON sync screen so their stored definitions match the plugin package.
+ACF is a runtime dependency for Cards, Rows, and the legacy Pattern migration. If it is inactive, those post types and field group are unavailable and administrators see a notice; native Patterns remain available. Existing sites with ACF post type definitions in the database should review ACF's JSON sync screen so their stored definitions match the plugin package. The migration runs automatically on activation or after an update in batches of 25. Its completion marker and source-to-destination post meta prevent duplicate copies on retry. Errors are reported in WordPress admin; the old posts remain unchanged.
 
-The interface uses WordPress-native admin styling (Author Branded mode, with AlphaSys identified in plugin metadata). Published Patterns use the active theme's single post template. Any signed-in user may view their front-end URLs; anonymous requests return 404. The plugin marks Pattern pages noindex, excludes Patterns from core search and sitemaps, and blocks anonymous Pattern REST, search, and oEmbed responses. The plugin does not provide its own front-end template. Files attached or embedded in a Pattern retain their normal WordPress media access rules.
+The interface uses WordPress-native admin styling (Author Branded mode, with AlphaSys identified in plugin metadata). The hidden legacy Pattern posts retain their signed-in front-end URLs for compatibility; anonymous requests return 404. The plugin marks those legacy pages noindex and excludes them from core search and sitemaps. Native patterns are managed in the Site Editor, not as public post pages. Files attached or embedded in a Pattern retain their normal WordPress media access rules.
 
 Build an installable ZIP with `scripts/build-plugin-zip.sh`. The archive has `as-atomic-content/` as its top-level folder.

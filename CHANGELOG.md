@@ -2,6 +2,12 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.2.0 - 2026-11-13
+
+- Linked Atoms > Patterns to the native WordPress pattern manager.
+- Added automatic, resumable migration of legacy Pattern posts to native unsynced patterns on activation or update.
+- Hid the legacy Pattern editor while retaining source posts and signed-in URLs for recovery.
+
 ## 0.1.2 - 2026-11-04
 
 - Enabled front-end Pattern viewing for signed-in users.

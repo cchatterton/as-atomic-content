@@ -41,6 +41,8 @@ function asac_acf_post_type_args( $args, $post_type ) {
 	$args['show_in_menu'] = false;
 	$args['show_in_admin_bar'] = false;
 	if ( 'pattern' === $post_type['post_type'] ) {
+		$args['show_ui'] = false;
+		$args['show_in_rest'] = false;
 		$args['public'] = false;
 		$args['publicly_queryable'] = true;
 		$args['exclude_from_search'] = true;
