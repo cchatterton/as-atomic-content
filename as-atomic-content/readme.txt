@@ -1,7 +1,7 @@
 === AS Atomic Content ===
 Tags: acf, custom-post-types, content
 Requires at least: 6.3
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,9 @@ Advanced Custom Fields 6.1 or later is required for Cards, Rows, and the one-tim
 4. On sites with existing ACF definitions, review ACF's JSON sync screen before making further changes to those definitions.
 
 == Changelog ==
+
+= 0.2.1 =
+* Sent the native Patterns list back arrow to the WordPress Dashboard.
 
 = 0.2.0 =
 * Linked Atoms > Patterns to the native WordPress pattern manager.

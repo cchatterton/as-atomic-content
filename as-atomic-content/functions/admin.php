@@ -105,6 +105,17 @@ function asac_enqueue_admin_assets() {
 }
 add_action( 'admin_enqueue_scripts', 'asac_enqueue_admin_assets' );
 
+/** Return from the native Pattern list to the WordPress Dashboard. */
+function asac_enqueue_pattern_back_script() {
+	global $pagenow;
+	if ( 'site-editor.php' !== $pagenow ) {
+		return;
+	}
+
+	wp_enqueue_script( 'asac-pattern-back', ASAC_PLUGIN_URL . 'assets/pattern-back.js', array(), ASAC_VERSION, true );
+}
+add_action( 'admin_enqueue_scripts', 'asac_enqueue_pattern_back_script' );
+
 /** Send direct visits to the parent menu to the Cards list. */
 function asac_redirect_to_cards() {
 	if ( ! current_user_can( 'edit_posts' ) ) {

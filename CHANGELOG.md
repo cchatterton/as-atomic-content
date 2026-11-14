@@ -2,6 +2,10 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.2.1 - 2026-11-14
+
+- Changed the native Patterns list back arrow to return to the WordPress Dashboard.
+
 ## 0.2.0 - 2026-11-13
 
 - Linked Atoms > Patterns to the native WordPress pattern manager.
