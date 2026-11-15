@@ -2,6 +2,12 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.3.2 - 2026-11-15
+
+- Rewrote the Atomic Design guide around Brad Frost's five levels and clarified how this site's content tools apply the idea.
+- Corrected the post type wrappers guide to use the Edit Wrappers screen and its named Reusable Rows positions.
+- Removed old Pattern migration history from editor-facing guides.
+
 ## 0.3.1 - 2026-11-15
 
 - Replaced the initial Help topics with eleven standalone guides matching the site's Card, Row, and Pattern workflows.
