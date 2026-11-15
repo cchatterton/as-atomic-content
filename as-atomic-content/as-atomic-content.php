@@ -2,7 +2,7 @@
 /**
  * Plugin Name: AS Atomic Content
  * Description: ACF cards and rows with WordPress-native patterns under one Atoms menu.
- * Version: 0.2.2
+ * Version: 0.2.3
  * Requires at least: 6.3
  * Requires PHP: 7.4
  * Author: AlphaSys
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ASAC_VERSION', '0.2.2' );
+define( 'ASAC_VERSION', '0.2.3' );
 define( 'ASAC_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'ASAC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 

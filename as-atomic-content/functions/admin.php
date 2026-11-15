@@ -54,12 +54,13 @@ function asac_register_admin_menu() {
 		'site-editor.php?p=%2Fpattern&postType=wp_block'
 	);
 
-	if ( current_user_can( 'manage_categories' ) ) {
+	$pattern_taxonomy = get_taxonomy( 'wp_pattern_category' );
+	if ( $pattern_taxonomy && current_user_can( $pattern_taxonomy->cap->manage_terms ) ) {
 		add_submenu_page(
 			$parent,
 			__( 'Pattern Categories', 'as-atomic-content' ),
 			__( 'Pattern Categories', 'as-atomic-content' ),
-			'manage_categories',
+			$pattern_taxonomy->cap->manage_terms,
 			'edit-tags.php?taxonomy=wp_pattern_category&post_type=wp_block'
 		);
 	}
