@@ -2,6 +2,11 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.2.4 - 2026-11-15
+
+- Removed Pattern Categories from the Atoms submenu, restoring its three content links.
+- Clarified that a new category must be committed with Enter or comma before saving a pattern.
+
 ## 0.2.3 - 2026-11-15
 
 - Used the native pattern taxonomy's configured management capability for the Atoms menu link.

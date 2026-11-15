@@ -54,26 +54,15 @@ function asac_register_admin_menu() {
 		'site-editor.php?p=%2Fpattern&postType=wp_block'
 	);
 
-	$pattern_taxonomy = get_taxonomy( 'wp_pattern_category' );
-	if ( $pattern_taxonomy && current_user_can( $pattern_taxonomy->cap->manage_terms ) ) {
-		add_submenu_page(
-			$parent,
-			__( 'Pattern Categories', 'as-atomic-content' ),
-			__( 'Pattern Categories', 'as-atomic-content' ),
-			$pattern_taxonomy->cap->manage_terms,
-			'edit-tags.php?taxonomy=wp_pattern_category&post_type=wp_block'
-		);
-	}
-
 	// WordPress inserts a parent link automatically; keep only the content links.
 	remove_submenu_page( $parent, $parent );
 }
 add_action( 'admin_menu', 'asac_register_admin_menu', 20 );
 
-/** Keep Atoms selected on its post and taxonomy screens. */
+/** Keep Atoms selected on Card and Row post screens. */
 function asac_admin_parent_file( $parent_file ) {
 	$screen = get_current_screen();
-	if ( $screen && ( in_array( $screen->post_type, array( 'card', 'row' ), true ) || 'wp_pattern_category' === $screen->taxonomy ) ) {
+	if ( $screen && in_array( $screen->post_type, array( 'card', 'row' ), true ) ) {
 		return 'as-atomic-content';
 	}
 	return $parent_file;
@@ -86,17 +75,14 @@ function asac_admin_submenu_file( $submenu_file ) {
 	if ( $screen && in_array( $screen->post_type, array( 'card', 'row' ), true ) ) {
 		return 'edit.php?post_type=' . $screen->post_type;
 	}
-	if ( $screen && 'wp_pattern_category' === $screen->taxonomy ) {
-		return 'edit-tags.php?taxonomy=wp_pattern_category&post_type=wp_block';
-	}
 	return $submenu_file;
 }
 add_filter( 'submenu_file', 'asac_admin_submenu_file' );
 
-/** Whether this is an Atoms admin screen. */
+/** Whether this is a Card or Row admin screen. */
 function asac_is_atomic_screen() {
 	$screen = get_current_screen();
-	return $screen && ( in_array( $screen->post_type, array( 'card', 'row' ), true ) || 'wp_pattern_category' === $screen->taxonomy );
+	return $screen && in_array( $screen->post_type, array( 'card', 'row' ), true );
 }
 
 /** Scope the sidebar scroll treatment to atomic content screens. */

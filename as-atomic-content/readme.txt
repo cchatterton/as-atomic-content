@@ -1,7 +1,7 @@
 === AS Atomic Content ===
 Tags: acf, custom-post-types, content
 Requires at least: 6.3
-Stable tag: 0.2.3
+Stable tag: 0.2.4
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,10 +18,14 @@ Advanced Custom Fields 6.1 or later is required for Cards, Rows, and the one-tim
 
 1. Install and activate Advanced Custom Fields 6.1 or later.
 2. Upload and activate AS Atomic Content.
-3. Use Atoms > Cards, Rows, Patterns, or Pattern Categories in WordPress admin. Patterns opens the native Site Editor; Pattern Categories opens the native taxonomy manager.
+3. Use Atoms > Cards, Rows, or Patterns in WordPress admin. Patterns opens the native Site Editor.
 4. On sites with existing ACF definitions, review ACF's JSON sync screen before making further changes to those definitions.
 
 == Changelog ==
+
+= 0.2.4 =
+* Removed Pattern Categories from Atoms, leaving Cards, Rows, and Patterns.
+* Documented the Enter or comma step required to commit a new category before saving.
 
 = 0.2.3 =
 * Used the pattern taxonomy's configured management permission for its Atoms menu link.
