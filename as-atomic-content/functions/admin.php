@@ -59,21 +59,44 @@ function asac_register_admin_menu() {
 }
 add_action( 'admin_menu', 'asac_register_admin_menu', 20 );
 
-/** Keep Atoms selected on Card and Row post screens. */
+/** Link Settings to WordPress's native pattern category manager. */
+function asac_register_pattern_categories_settings_menu() {
+	$taxonomy = get_taxonomy( 'wp_pattern_category' );
+	if ( ! $taxonomy || ! current_user_can( $taxonomy->cap->manage_terms ) ) {
+		return;
+	}
+
+	add_submenu_page(
+		'options-general.php',
+		__( 'Pattern Categories', 'as-atomic-content' ),
+		__( 'Pattern Categories', 'as-atomic-content' ),
+		$taxonomy->cap->manage_terms,
+		'edit-tags.php?taxonomy=wp_pattern_category&post_type=wp_block'
+	);
+}
+add_action( 'admin_menu', 'asac_register_pattern_categories_settings_menu', 20 );
+
+/** Select the appropriate menu on atomic post and pattern taxonomy screens. */
 function asac_admin_parent_file( $parent_file ) {
 	$screen = get_current_screen();
 	if ( $screen && in_array( $screen->post_type, array( 'card', 'row' ), true ) ) {
 		return 'as-atomic-content';
 	}
+	if ( $screen && 'wp_pattern_category' === $screen->taxonomy ) {
+		return 'options-general.php';
+	}
 	return $parent_file;
 }
 add_filter( 'parent_file', 'asac_admin_parent_file' );
 
-/** Highlight the matching list entry while editing an atomic post. */
+/** Highlight the current Atoms or Settings submenu entry. */
 function asac_admin_submenu_file( $submenu_file ) {
 	$screen = get_current_screen();
 	if ( $screen && in_array( $screen->post_type, array( 'card', 'row' ), true ) ) {
 		return 'edit.php?post_type=' . $screen->post_type;
+	}
+	if ( $screen && 'wp_pattern_category' === $screen->taxonomy ) {
+		return 'edit-tags.php?taxonomy=wp_pattern_category&post_type=wp_block';
 	}
 	return $submenu_file;
 }

@@ -2,6 +2,11 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.2.5 - 2026-11-15
+
+- Added Settings > Pattern Categories, linking to WordPress's native pattern category manager.
+- Kept Settings selected while managing pattern categories; Atoms still has only Cards, Rows, and Patterns.
+
 ## 0.2.4 - 2026-11-15
 
 - Removed Pattern Categories from the Atoms submenu, restoring its three content links.
