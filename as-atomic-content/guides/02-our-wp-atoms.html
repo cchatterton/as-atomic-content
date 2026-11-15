@@ -1,5 +1,8 @@
-<h1>Our WP Atoms — Cards, Rows and Patterns</h1>
-<p>The Atoms menu is the place to manage three kinds of building block already used on this WordPress site. When editing an existing page, identify which kind supplies the part you want to change before editing its source.</p>
+<h1>Our Composable Atoms</h1>
+<p>Our site is assembled from reusable content, values, styles, and code. We call these composable atoms: parts that can be combined into a page and maintained at their source. The <strong>Atoms</strong> admin menu groups Cards, Rows, and Patterns, but it is only one part of this wider system.</p>
+
+<h2 id="content-and-layout">Content and layout</h2>
+<p>Cards, Rows, and Patterns help editors compose visible content. Check whether a part is shared or copied before changing it on an existing page.</p>
 
 <h2 id="cards">Cards</h2>
 <p>A Card is a micro template: HTML in the <strong>Card Markup</strong> field for one item. AlphaBlock can use a Card to display queried posts; AlphaCard can use one with values entered in the page editor. Changing the shared Card markup can change every placement that uses it, while each placement can still supply different content.</p>
@@ -10,9 +13,19 @@
 <h2 id="patterns">Patterns</h2>
 <p>Patterns are native WordPress arrangements of blocks. An <strong>unsynced</strong> Pattern supplies a starting copy that editors can change independently after insertion. A <strong>synced</strong> Pattern stays linked to its source and updates across placements. Check its sync status before changing a Pattern that is already in use.</p>
 
+<h2 id="shared-values-and-colours">Shared values and colours</h2>
+<p><strong>List of Values (LOV)</strong> manages named values that site components can reuse. <strong>Palette</strong>, provided by TN Pallet, manages named colours and generates colour utilities for use across the site. Updating a shared value or colour can change multiple components without editing each placement.</p>
+
+<h2 id="local-code">Local CSS and JavaScript</h2>
+<p><strong>Local CSS</strong> holds site-specific styling rules, while custom JavaScript snippets supply behaviour where needed. These can support Cards, Rows, Patterns, and other parts of the site. Their scope and delivery settings matter: a change may affect one target or many pages.</p>
+
 <h2 id="where-to-find-them">Where to find them</h2>
 <ul>
 <li><a href="edit.php?post_type=card">Atoms &gt; Cards</a> lists Card templates.</li>
 <li><a href="edit.php?post_type=row">Atoms &gt; Rows</a> lists reusable Rows.</li>
 <li><a href="site-editor.php?p=%2Fpattern&amp;postType=wp_block">Atoms &gt; Patterns</a> opens the native WordPress pattern manager.</li>
+<li><strong>Settings &gt; List of Values (LOV)</strong> manages shared lists and values.</li>
+<li><strong>Appearance &gt; Palette</strong> manages the named colour system.</li>
+<li><strong>Local CSS</strong> manages custom CSS and JavaScript snippets.</li>
 </ul>
+<p>When editing an existing site, identify the source of the part you see and check where else it is used. That tells you whether to update one placement or the shared source.</p>

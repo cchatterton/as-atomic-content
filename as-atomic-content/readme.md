@@ -1,6 +1,6 @@
 # AS Atomic Content
 
-AlphaSys WordPress plugin, version 0.3.3. Requires WordPress 6.3 or later and Advanced Custom Fields 6.1 or later for Cards, Rows, and legacy Pattern migration.
+AlphaSys WordPress plugin, version 0.3.4. Requires WordPress 6.3 or later and Advanced Custom Fields 6.1 or later for Cards, Rows, and legacy Pattern migration.
 
 The plugin registers `card` and `row` through ACF Local JSON. It keeps the supplied ACF keys and the Card Markup field group, including the `card_markup` field key. Legacy `pattern` posts are copied to native WordPress `wp_block` patterns with `wp_pattern_sync_status` set to `unsynced`. The original posts are retained for recovery.
 

@@ -2,6 +2,10 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.3.4 - 2026-11-15
+
+- Renamed the overview guide to Our Composable Atoms and explained the wider system of Cards, Rows, Patterns, LOV, Palette, and Local CSS/JavaScript.
+
 ## 0.3.3 - 2026-11-15
 
 - Focused the Atomic Design guide on Brad Frost's five levels and linked to his methodology chapter, leaving site-specific content tools to the separate overview.
