@@ -1,15 +1,16 @@
 <h1>Rows — Post Type Wrappers</h1>
-<p>A post type wrapper is a site-level way to place a shared Row around or alongside content of a particular post type. Instead of adding a Row block to every post, the site's theme or template selects the Row as part of rendering that post type. The wrapper setup is outside this plugin; Atoms stores the Row it refers to.</p>
+<p>Post type wrappers place reusable Rows at named positions around the content of a post type. For example, <strong>About-us &gt; Edit Wrappers</strong> opens the About-us Wrappers screen. Its tabs include positions such as <strong>Before Content</strong> and <strong>After Content</strong>, each with a <strong>Reusable Rows</strong> field. The available positions can differ by post type.</p>
 
-<h2 id="how-to-recognise-one">How to recognise a wrapper</h2>
-<p>If the same section appears on many posts but there is no Row block in the individual post editor, it may come from a post type wrapper. Check the relevant template or ask the site team which Row it calls before editing. Do not add another Row block to the post until you know whether that would duplicate the section.</p>
-
-<h2 id="edit-a-wrapper-row">Edit the Row used by a wrapper</h2>
+<h2 id="choose-a-position">Choose a wrapper position</h2>
 <ol>
-<li>Identify the Row selected for the post type in the site's wrapper or template configuration.</li>
-<li>Open that Row under <a href="edit.php?post_type=row">Atoms &gt; Rows</a> and change its blocks.</li>
-<li>Review several posts of that type, including posts with missing fields and different content lengths, before treating the change as complete.</li>
+<li>Open the relevant post type menu and choose <strong>Edit Wrappers</strong>.</li>
+<li>Select the tab for the position where the Row should appear, such as <strong>Before Content</strong> or <strong>After Content</strong>.</li>
+<li>Use <strong>Reusable Rows</strong> to select the Row for that position, then save the wrapper settings.</li>
+<li>Check a representative post of that type to confirm the Row appears in the intended place.</li>
 </ol>
 
-<h2 id="context-and-impact">Context and impact</h2>
-<p>A wrapper may provide layout and post context around the Row. Its exact placement and settings depend on the theme. A change to the shared Row can affect every post using that wrapper; a change to wrapper configuration can affect the whole post type. Check the full rendered page, not only the Row editor.</p>
+<h2 id="change-the-row">Change the Row itself</h2>
+<p>The wrapper screen chooses <em>where</em> a Row appears. To change its actual blocks, open the selected Row under <a href="edit.php?post_type=row">Atoms &gt; Rows</a>. A Row may also be used elsewhere, so review its other placements before changing shared content.</p>
+
+<h2 id="scope-of-a-change">Scope of a change</h2>
+<p>Changing the Rows assigned to a wrapper position can change that position across the post type. Editing the shared Row can affect every place that uses it. Review representative posts after either change, including posts with different content lengths. A Row block placed directly in one post is a separate placement from these post type wrapper settings.</p>

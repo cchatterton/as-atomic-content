@@ -1,7 +1,7 @@
 === AS Atomic Content ===
 Tags: acf, custom-post-types, content
 Requires at least: 6.3
-Stable tag: 0.3.1
+Stable tag: 0.3.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,11 @@ Advanced Custom Fields 6.1 or later is required for Cards, Rows, and the one-tim
 4. On sites with existing ACF definitions, review ACF's JSON sync screen before making further changes to those definitions.
 
 == Changelog ==
+
+= 0.3.2 =
+* Explain atomic design as Brad Frost's five-level interface methodology, distinct from this site's content tools.
+* Describe post type wrapper positions and Reusable Rows using the Edit Wrappers screen.
+* Remove historical Pattern migration details from editor guides.
 
 = 0.3.1 =
 * Replaced the initial Help topics with eleven standalone guides for atomic design, Cards, Rows, and native Patterns.
