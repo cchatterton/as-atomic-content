@@ -2,6 +2,12 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.2.2 - 2026-11-15
+
+- Linked Atoms > Pattern Categories to WordPress's native pattern category manager.
+- Kept Atoms visible and selected on the category manager screen.
+- Documented how to commit and save category assignments in the native pattern editor.
+
 ## 0.2.1 - 2026-11-14
 
 - Changed the native Patterns list back arrow to return to the WordPress Dashboard.
