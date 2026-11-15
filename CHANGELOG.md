@@ -2,6 +2,12 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.3.1 - 2026-11-15
+
+- Replaced the initial Help topics with eleven standalone guides matching the site's Card, Row, and Pattern workflows.
+- Covered Card Wizard, utility classes, Echo, the reusable Row block, post type wrappers, and synced and unsynced Patterns.
+- Removed cross links between guides while retaining WordPress admin and native Pattern documentation links.
+
 ## 0.3.0 - 2026-11-15
 
 - Added Atoms > Help with file-backed guides for Cards, merge tokens, reusable Rows, native Patterns, component choice, and common questions.

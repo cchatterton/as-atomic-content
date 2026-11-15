@@ -1,0 +1,14 @@
+<h1>Cards — Utility Classes</h1>
+<p>Utility classes are short CSS class names that apply one reusable styling rule. In Card Markup they keep spacing, colour, and layout choices consistent with the site. The available classes come from the active theme and palette, so use the Card Wizard's <strong>Utility</strong> and <strong>Palette</strong> tabs as the site's current reference.</p>
+
+<h2 id="colour-classes">Colour classes</h2>
+<p>Configured palette colours can provide classes such as <code>text-{name}</code>, <code>border-{name}</code>, and <code>background-{name}</code>. Hover variants use names such as <code>hover-background-{name}</code>. Alpha variants may add <code>-10</code> through <code>-90</code> for transparency. Replace <code>{name}</code> with a colour actually listed in the Wizard; a guessed class may have no styling.</p>
+
+<h2 id="layout-classes">Layout and presentation classes</h2>
+<p>The Wizard's Utility tab also lists site classes for spacing, borders, alignment, typography, images, and line clamping. Examples include <code>padding-sm</code>, <code>gap-md</code>, <code>border-radius-sm</code>, <code>align-flex-center</code>, and <code>clamp-2</code>. Confirm the exact name and behaviour on the current site before using it.</p>
+
+<h2 id="put-classes-in-markup">Put classes in Card Markup</h2>
+<p>Add classes to the relevant HTML element, for example <code>&lt;div class="padding-sm background-light-1"&gt;...&lt;/div&gt;</code>. Keep the element's purpose and accessible text intact. A class changes appearance; it does not supply the Card's content. Save the Card, then preview it where it is used at desktop and mobile widths.</p>
+
+<h2 id="when-a-class-is-missing">When a class is missing</h2>
+<p>If a class appears in markup but has no effect, check its spelling against the Wizard and confirm the configured palette colour exists. Theme or palette changes can affect both the editor preview and the front end. Ask the site team before adding a one-off style to a shared Card.</p>

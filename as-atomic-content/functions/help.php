@@ -33,7 +33,7 @@ function asac_help_guides() {
 			continue;
 		}
 
-		$title = trim( wp_strip_all_tags( $heading[1] ) );
+		$title = trim( wp_specialchars_decode( wp_strip_all_tags( $heading[1] ), ENT_QUOTES ) );
 		if ( '' === $title || isset( $guides[ $matches[1] ] ) ) {
 			continue;
 		}
@@ -61,7 +61,7 @@ function asac_render_help_page() {
 	?>
 	<div class="wrap asac-help" data-current-guide="<?php echo esc_attr( $slug ); ?>">
 		<h1><?php esc_html_e( 'Atoms Help', 'as-atomic-content' ); ?></h1>
-		<p class="description"><?php esc_html_e( 'Learn how Cards, Rows, and native WordPress Patterns work together.', 'as-atomic-content' ); ?></p>
+		<p class="description"><?php esc_html_e( 'Practical guides to the design system, Cards, Rows, and WordPress Patterns.', 'as-atomic-content' ); ?></p>
 		<div class="asac-help-layout">
 			<nav class="asac-help-sidebar" aria-label="<?php esc_attr_e( 'Help topics', 'as-atomic-content' ); ?>">
 				<h2><?php esc_html_e( 'Topics', 'as-atomic-content' ); ?></h2>

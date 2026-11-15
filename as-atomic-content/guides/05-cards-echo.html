@@ -1,0 +1,21 @@
+<h1>Cards — Echo merge tokens</h1>
+<p>Echo tokens are placeholders inside Card Markup, wrapped in double percent signs: <code>%%...%%</code>. The site's Card renderer replaces supported tokens with values from the item being displayed. This lets one Card layout show different posts without copying its markup.</p>
+
+<h2 id="common-echo-tokens">Common Echo tokens</h2>
+<table><thead><tr><th>Example</th><th>What it requests</th></tr></thead><tbody>
+<tr><td><code>%%$post-&gt;post_title%%</code></td><td>The displayed post's title.</td></tr>
+<tr><td><code>%%$post-&gt;post_excerpt%%</code></td><td>The displayed post's excerpt.</td></tr>
+<tr><td><code>%%$post-&gt;ID%%</code></td><td>The displayed post's ID.</td></tr>
+<tr><td><code>%%$acf-&gt;meta_key%%</code></td><td>An ACF field; replace <code>meta_key</code> with its real field name.</td></tr>
+<tr><td><code>%%$meta-&gt;meta_key%%</code></td><td>A stored post meta value with that key.</td></tr>
+<tr><td><code>%%$image-&gt;featured%%</code></td><td>The displayed post's featured image, where supported.</td></tr>
+</tbody></table>
+
+<h2 id="use-in-markup">Use a token in markup</h2>
+<p>For example, <code>&lt;h3&gt;%%$post-&gt;post_title%%&lt;/h3&gt;</code> creates a heading using the current item's title. Use a real field name for ACF or meta tokens, and preview with a post that has that field populated. A missing value can leave an empty space in the Card.</p>
+
+<h2 id="alphacard-difference">What changes in AlphaCard?</h2>
+<p>AlphaCard scans the selected Card for <code>%%...%%</code> placeholders and creates editor inputs. In AlphaCard, even <code>%%$post-&gt;post_title%%</code> is an input name: it does not fetch the current post title. Enter a value for each placeholder in the AlphaCard block, and use <strong>Get merge tokens</strong> after changing its Card selection. In AlphaBlock's Card mode, the Card renderer supplies values from each queried post.</p>
+
+<h2 id="check-the-output">Check the output</h2>
+<p>Preview the Card with real content and review empty fields, escaping, links, and images. Echo's double-percent Card placeholders are different from AlphaBlock's single-percent query context tokens such as <code>%me%</code>; a query token belongs in a block setting, not in Card Markup.</p>

@@ -1,0 +1,15 @@
+<h1>Rows — Post Type Wrappers</h1>
+<p>A post type wrapper is a site-level way to place a shared Row around or alongside content of a particular post type. Instead of adding a Row block to every post, the site's theme or template selects the Row as part of rendering that post type. The wrapper setup is outside this plugin; Atoms stores the Row it refers to.</p>
+
+<h2 id="how-to-recognise-one">How to recognise a wrapper</h2>
+<p>If the same section appears on many posts but there is no Row block in the individual post editor, it may come from a post type wrapper. Check the relevant template or ask the site team which Row it calls before editing. Do not add another Row block to the post until you know whether that would duplicate the section.</p>
+
+<h2 id="edit-a-wrapper-row">Edit the Row used by a wrapper</h2>
+<ol>
+<li>Identify the Row selected for the post type in the site's wrapper or template configuration.</li>
+<li>Open that Row under <a href="edit.php?post_type=row">Atoms &gt; Rows</a> and change its blocks.</li>
+<li>Review several posts of that type, including posts with missing fields and different content lengths, before treating the change as complete.</li>
+</ol>
+
+<h2 id="context-and-impact">Context and impact</h2>
+<p>A wrapper may provide layout and post context around the Row. Its exact placement and settings depend on the theme. A change to the shared Row can affect every post using that wrapper; a change to wrapper configuration can affect the whole post type. Check the full rendered page, not only the Row editor.</p>

@@ -1,0 +1,14 @@
+<h1>Patterns — Sync vs Unsync</h1>
+<p>WordPress Patterns can be <strong>synced</strong> or <strong>unsynced</strong>. This setting decides what happens to existing placements when the source Pattern changes.</p>
+
+<h2 id="unsynced">Unsynced Patterns</h2>
+<p>An unsynced Pattern supplies a starting copy of its blocks. After insertion, the page editor can change that copy without changing the original Pattern or copies on other pages. Editing the source Pattern later does not update copies already inserted. Use this when the layout should be reusable but each page needs its own wording or imagery. Migrated legacy Atoms Patterns start as Not synced.</p>
+
+<h2 id="synced">Synced Patterns</h2>
+<p>A synced Pattern stays connected to its source. Editing the shared Pattern can update every placement. Use this when the same content and layout should stay consistent across the site. Before changing one, review where it appears and check representative placements afterwards.</p>
+
+<h2 id="check-status">Check the status before editing</h2>
+<p>In <a href="site-editor.php?p=%2Fpattern&amp;postType=wp_block">Atoms &gt; Patterns</a>, the list shows each Pattern's sync status. Open a Pattern to inspect or change it. The WordPress editor may label the two states <strong>Synced</strong> and <strong>Not synced</strong>. Do not assume a Pattern is unsynced because its content looks editable on a page.</p>
+
+<h2 id="source-versus-placement">Source versus placement</h2>
+<p>If you want to change one page only, first check whether the inserted Pattern is synced. If you want a change everywhere, verify that every intended placement really uses the same synced Pattern. For an unsynced Pattern, each inserted copy is its own page content after insertion.</p>
