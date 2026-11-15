@@ -1,0 +1,134 @@
+.asac-help-layout {
+	display: grid;
+	grid-template-columns: minmax(200px, 240px) minmax(0, 820px);
+	gap: 24px;
+	align-items: start;
+	margin-top: 22px;
+}
+
+.asac-help-sidebar,
+.asac-help-article {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.asac-help-sidebar {
+	position: sticky;
+	top: 48px;
+	max-height: calc(100vh - 72px);
+	overflow-y: auto;
+	padding: 16px;
+}
+
+.asac-help-sidebar h2 {
+	font-size: 13px;
+	margin: 0 0 10px;
+}
+
+.asac-help-sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.asac-help-sidebar li {
+	margin: 0;
+}
+
+.asac-help-sidebar a {
+	display: block;
+	padding: 7px 9px;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+.asac-help-sidebar a[aria-current="page"] {
+	background: #f0f6fc;
+	font-weight: 600;
+}
+
+.asac-help-outline {
+	border-top: 1px solid #dcdcde;
+	margin-top: 18px;
+	padding-top: 18px;
+}
+
+.asac-help-outline:empty {
+	display: none;
+}
+
+.asac-help-subsection a {
+	padding-left: 21px;
+}
+
+.asac-help-article {
+	min-height: 360px;
+	padding: 24px 30px;
+	line-height: 1.6;
+	scroll-margin-top: 45px;
+}
+
+.asac-help-article:focus {
+	outline: none;
+}
+
+.asac-help-article h1 {
+	font-size: 26px;
+	line-height: 1.25;
+	margin: 0 0 18px;
+}
+
+.asac-help-article h2 {
+	font-size: 20px;
+	margin: 30px 0 12px;
+	scroll-margin-top: 45px;
+}
+
+.asac-help-article h3 {
+	font-size: 16px;
+	margin: 22px 0 9px;
+	scroll-margin-top: 45px;
+}
+
+.asac-help-article p,
+.asac-help-article li {
+	font-size: 14px;
+}
+
+.asac-help-article li {
+	margin-bottom: 7px;
+}
+
+.asac-help-article code {
+	font-size: 13px;
+}
+
+.asac-help-article table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.asac-help-article th,
+.asac-help-article td {
+	border: 1px solid #dcdcde;
+	padding: 9px;
+	text-align: left;
+	vertical-align: top;
+}
+
+@media (max-width: 900px) {
+	.asac-help-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.asac-help-sidebar {
+		position: static;
+		max-height: none;
+	}
+
+	.asac-help-article {
+		padding: 20px;
+	}
+}

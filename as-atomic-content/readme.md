@@ -1,10 +1,12 @@
 # AS Atomic Content
 
-AlphaSys WordPress plugin, version 0.2.5. Requires WordPress 6.3 or later and Advanced Custom Fields 6.1 or later for Cards, Rows, and legacy Pattern migration.
+AlphaSys WordPress plugin, version 0.3.0. Requires WordPress 6.3 or later and Advanced Custom Fields 6.1 or later for Cards, Rows, and legacy Pattern migration.
 
 The plugin registers `card` and `row` through ACF Local JSON. It keeps the supplied ACF keys and the Card Markup field group, including the `card_markup` field key. Legacy `pattern` posts are copied to native WordPress `wp_block` patterns with `wp_pattern_sync_status` set to `unsynced`. The original posts are retained for recovery.
 
-The WordPress admin menu contains one **Atoms** parent with **Cards**, **Rows**, and **Patterns**. Patterns opens the native Site Editor pattern manager. The back arrow on the Patterns list returns to the WordPress Dashboard. On Card and Row admin screens, the menu opens and the desktop sidebar scrolls to Atoms. Creation remains available from the respective editors, without separate creation links in the menu.
+The WordPress admin menu contains one **Atoms** parent with **Cards**, **Rows**, **Patterns**, and **Help**. Patterns opens the native Site Editor pattern manager. Help explains the component types in separate HTML files under `guides/`; its topic list is generated from those files, and selecting a topic loads it through WordPress AJAX. Each guide has section links, and ordinary page links continue to work when JavaScript is unavailable. The back arrow on the Patterns list returns to the WordPress Dashboard. On Card and Row admin screens, the menu opens and the desktop sidebar scrolls to Atoms. Creation remains available from the respective editors, without separate creation links in the menu.
+
+To add or edit a Help topic, add or change a file named `NN-topic-slug.html` in `guides/`, where `NN` controls its order and the file contains one `<h1>` for its menu title. Use `<h2 id="section-name">` or `<h3 id="section-name">` for clickable section navigation. Guide HTML is sanitized with `wp_kses_post` before rendering, and the AJAX endpoint is restricted to signed-in users who can edit posts.
 
 To categorise a pattern, open it in the Site Editor, expand **Pattern Categories**, type a category name and press **Enter** (or comma) to add it to the pattern, then click **Save**. This works for new and existing category names. Text left in the input has not been assigned; clicking Save does not create a category from uncommitted input. **Settings > Pattern Categories** opens the native category manager for users with category-management permission. Its Count column shows how many patterns are assigned to each category.
 

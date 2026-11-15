@@ -54,6 +54,15 @@ function asac_register_admin_menu() {
 		'site-editor.php?p=%2Fpattern&postType=wp_block'
 	);
 
+	$GLOBALS['asac_help_hook'] = add_submenu_page(
+		$parent,
+		__( 'Help', 'as-atomic-content' ),
+		__( 'Help', 'as-atomic-content' ),
+		'edit_posts',
+		'as-atomic-content-help',
+		'asac_render_help_page'
+	);
+
 	// WordPress inserts a parent link automatically; keep only the content links.
 	remove_submenu_page( $parent, $parent );
 }

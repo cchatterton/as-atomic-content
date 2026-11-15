@@ -2,6 +2,12 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.3.0 - 2026-11-15
+
+- Added Atoms > Help with file-backed guides for Cards, merge tokens, reusable Rows, native Patterns, component choice, and common questions.
+- Added an AJAX-loaded guide reader with dynamic topic navigation, section links, browser history, and a no-JavaScript fallback.
+- Linked the guides to relevant WordPress admin screens and official native Pattern documentation.
+
 ## 0.2.5 - 2026-11-15
 
 - Added Settings > Pattern Categories, linking to WordPress's native pattern category manager.
