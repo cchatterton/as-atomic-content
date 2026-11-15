@@ -1,19 +1,23 @@
 <h1>Atomic Design — what is it?</h1>
-<p>Atomic design is a way to understand and create an interface as both a whole and a set of connected parts. Brad Frost describes five levels that help a team move between a small element, a working component, and the page a person actually uses. It is a way of thinking about an interface, not a prescribed set of WordPress content types.</p>
+<p>Brad Frost's atomic design is a way to think about an interface as a connected system of parts and wholes. It describes five levels: atoms, molecules, organisms, templates, and pages. The levels give a team a shared language for discussing how small interface elements combine into a complete experience.</p>
 
-<h2 id="five-levels">The five levels</h2>
-<ol>
-<li><strong>Atoms</strong> are the smallest useful interface elements, such as a label, input, or button.</li>
-<li><strong>Molecules</strong> combine elements into a simple working unit, such as a labelled search field with its button.</li>
-<li><strong>Organisms</strong> bring smaller units together into a distinct section, such as a site header.</li>
-<li><strong>Templates</strong> arrange sections into a page layout and define the structure that content needs, before the final content is added.</li>
-<li><strong>Pages</strong> fill a template with real content. They show how the complete interface works and reveal where the smaller parts need to improve.</li>
-</ol>
+<h2 id="atoms">Atoms</h2>
+<p>Atoms are the smallest useful interface elements: a button, input, label, icon, or heading style, for example. Each has its own appearance and behaviour. Looking at these basics together reveals whether the interface is consistent.</p>
 
-<h2 id="parts-and-whole">Work between the parts and the whole</h2>
-<p>These levels are not five steps that must be finished in order. A page with real content can expose a problem in a component; improving that component can then improve other pages that use it. Atomic design gives the team a shared way to discuss those relationships and make deliberate decisions about reuse.</p>
+<h2 id="molecules">Molecules</h2>
+<p>Molecules combine a few atoms into one simple component with a purpose. A search field, its label, and a submit button can form a search control. The parts still matter, but the combination now performs a task.</p>
 
-<h2 id="our-implementation">How we apply the idea here</h2>
-<p>We organise composable content with Cards, Rows, and WordPress Patterns. Those are tools we chose to put the idea into practice on this site. They are not the five levels of atomic design, and a Card, Row, or Pattern does not automatically correspond to one level. The other guides explain how each tool stores content and how changes reach its placements.</p>
+<h2 id="organisms">Organisms</h2>
+<p>Organisms are larger, distinct sections of an interface assembled from atoms, molecules, or other organisms. A site header might bring together a logo, navigation, and search control. A list of repeated content items can also form an organism.</p>
 
-<p><a href="https://atomicdesign.bradfrost.com/chapter-2/" target="_blank" rel="noopener noreferrer">Read Brad Frost’s Atomic Design Methodology</a> for the full explanation.</p>
+<h2 id="templates">Templates</h2>
+<p>Templates arrange those components into a page-level structure. They show where content belongs and what the layout must accommodate, such as image proportions or varying text lengths, without relying on one final set of copy and images.</p>
+
+<h2 id="pages">Pages</h2>
+<p>Pages put representative real content into a template. This is where the system is tested as people will experience it. A long title, missing image, or unusual amount of content can expose a problem that was not visible when a component was viewed alone.</p>
+
+<h2 id="use-the-model">Use the model in both directions</h2>
+<p>These levels are a mental model, not a five-step production sequence. You can examine a page, identify the smaller parts that shape it, improve a component, and then return to the page to see whether the change works in context. The parts influence the whole, and real content can reveal what the parts need to do better.</p>
+
+<h2 id="read-the-source">Read Brad Frost's explanation</h2>
+<p>This overview is based on <a href="https://atomicdesign.bradfrost.com/chapter-2/" target="_blank" rel="noopener noreferrer">Chapter 2: Atomic Design Methodology</a> by Brad Frost. His chapter explains each level in more depth, including why the model is useful and how teams can adapt its terminology.</p>

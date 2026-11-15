@@ -2,6 +2,11 @@
 
 All notable changes to AS Atomic Content are recorded here.
 
+## 0.3.3 - 2026-11-15
+
+- Focused the Atomic Design guide on Brad Frost's five levels and linked to his methodology chapter, leaving site-specific content tools to the separate overview.
+- Updated the Post Type Wrappers guide to match the site's Edit Wrappers tabs, Add Row control, Row selector, and shared change scope.
+
 ## 0.3.2 - 2026-11-15
 
 - Rewrote the Atomic Design guide around Brad Frost's five levels and clarified how this site's content tools apply the idea.
